@@ -10,3 +10,5 @@ This is a guide for me for when I'm setting up blocker configuration for my new 
 This removes the stupid and unasked web results in the windows start:
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/6662bc99-9767-49fe-b4ec-0de81ee8a2b5)
 
+2. remove the upper left arrow on chrome
+![image](https://github.com/molodchyk/blocker-setup/assets/73010708/c553f96b-0620-4752-89b7-397cb68dd46f)
