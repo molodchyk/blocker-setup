@@ -31,3 +31,7 @@ now it looks like this:
 regedit -> Computer\HKEY_CURRENT_USER\Software\Policies\Google\Chrome -> BrowserGuestModeEnabled -> leave the value to 0.
 
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/e49fa010-2a23-40d7-8352-4eebdaca5c6c)
+
+now the profiles window looks like this:
+
+![image](https://github.com/molodchyk/blocker-setup/assets/73010708/61fa17db-6fec-4e24-a30a-eeacaa3b778f)
