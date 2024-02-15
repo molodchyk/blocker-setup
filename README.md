@@ -35,3 +35,11 @@ regedit -> Computer\HKEY_CURRENT_USER\Software\Policies\Google\Chrome -> Browser
 now the profiles window looks like this:
 
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/61fa17db-6fec-4e24-a30a-eeacaa3b778f)
+
+6. Disable adding new users to chrome
+
+regedit -> Computer\HKEY_CURRENT_USER\Software\Policies\Google\Chrome -> BrowserAddPersonEnabled -> leave the value to 0.
+
+now the profiles window looks like this:
+
+![image](https://github.com/molodchyk/blocker-setup/assets/73010708/23fa73e3-b7fb-4aa7-a3f2-e669c4ebe2e8)
