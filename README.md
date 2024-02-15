@@ -8,15 +8,15 @@ This is a guide for me for when I'm setting up blocker configuration for my new 
 
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/7a8e350a-9898-4158-bce3-06d69e456a89)
 
-This removes the stupid and unasked web results in the windows start:
+This removes web results in the windows start:
 
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/6662bc99-9767-49fe-b4ec-0de81ee8a2b5)
 
-2. Remove the upper left arrow on chrome
+2. Remove the upper left arrow on Chrome
 
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/c553f96b-0620-4752-89b7-397cb68dd46f)
 
-4. Disable Incognito Mode on chrome
+4. Disable Incognito Mode on Chrome
 
 regedit -> Computer\HKEY_CURRENT_USER\Software\Policies\Google\Chrome -> REG_DWORD -> set value 1
 
@@ -25,3 +25,9 @@ regedit -> Computer\HKEY_CURRENT_USER\Software\Policies\Google\Chrome -> REG_DWO
 now it looks like this:
 
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/1d92000f-4c3f-4290-be17-7e92a291148d)
+
+5. Disable Guest Mode on Chrome
+
+regedit -> Computer\HKEY_CURRENT_USER\Software\Policies\Google\Chrome -> BrowserGuestModeEnabled -> leave the value to 0.
+
+![image](https://github.com/molodchyk/blocker-setup/assets/73010708/e49fa010-2a23-40d7-8352-4eebdaca5c6c)
