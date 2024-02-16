@@ -43,3 +43,19 @@ regedit -> Computer\HKEY_CURRENT_USER\Software\Policies\Google\Chrome -> Browser
 now the profiles window looks like this:
 
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/23fa73e3-b7fb-4aa7-a3f2-e669c4ebe2e8)
+
+7. Enforce the english language as the UI language of the windows
+
+Nls\Language looks like this:
+
+![image](https://github.com/molodchyk/blocker-setup/assets/73010708/e570fbdb-4213-4b7c-bf03-3bce056ab3b4)
+
+MUI\UILanguages\en-US looks like this: (remove all except en-US)
+
+![image](https://github.com/molodchyk/blocker-setup/assets/73010708/24162e64-6d84-4fc8-a8ec-fae32171c8e5)
+
+Control Panel\Desktop looks like this: (but I believe it doesn't do anything)
+
+![image](https://github.com/molodchyk/blocker-setup/assets/73010708/88ed5f2b-506e-4906-bf4e-07adeb3f19c3)
+
+
