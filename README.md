@@ -54,8 +54,14 @@ MUI\UILanguages\en-US looks like this: (remove all except en-US)
 
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/24162e64-6d84-4fc8-a8ec-fae32171c8e5)
 
-Control Panel\Desktop looks like this: (but I believe it doesn't do anything)
+MUI\Settings looks like this:
 
-![image](https://github.com/molodchyk/blocker-setup/assets/73010708/88ed5f2b-506e-4906-bf4e-07adeb3f19c3)
+![image](https://github.com/molodchyk/blocker-setup/assets/73010708/9f278c5c-3119-4cc9-8f71-9d62a5a2729d)
+
+this policy will enforce the language. 
+
+Settings should look like this (now, we can't change the language)
+
+![image](https://github.com/molodchyk/blocker-setup/assets/73010708/ae18fa4f-9fd7-4089-9aa5-cdc7f4407221)
 
 
