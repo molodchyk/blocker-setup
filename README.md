@@ -60,7 +60,7 @@ MUI\Settings looks like this:
 
 this policy will enforce the language. 
 
-Settings should look like this (now, we can't change the language)
+Settings should look like this (now, we can't change the UI language)
 
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/ae18fa4f-9fd7-4089-9aa5-cdc7f4407221)
 
