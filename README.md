@@ -64,4 +64,12 @@ Settings should look like this (now, we can't change the UI language)
 
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/ae18fa4f-9fd7-4089-9aa5-cdc7f4407221)
 
+8. Our next step is to disable changing time and time zone in settings. It seems impossible to do it in regedit, so we will try to enable local group policy editor and local security policy.
+
+I actually have no idea how robust adding these feature is, and even what it does, but here is the script to paste into cmd with admin rights:
+
+FOR %F IN ("%SystemRoot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~*.mum") DO (DISM /Online /NoRestart /Add-Package:"%F")
+FOR %F IN ("%SystemRoot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~*.mum") DO (DISM /Online /NoRestart /Add-Package:"%F")
+
+
 
