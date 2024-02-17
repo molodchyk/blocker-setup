@@ -80,3 +80,10 @@ It should change from something like this:
 To something like this:
 
 ![Screenshot 2024-02-17 011427](https://github.com/molodchyk/blocker-setup/assets/73010708/bd6691f6-81b3-4a2e-8e89-6c744677b1ab)
+
+10. FocusMe settings:
+
+
+![image](https://github.com/molodchyk/blocker-setup/assets/73010708/1da15769-a545-4fde-a996-eca0e2ea83c6)
+
+![image](https://github.com/molodchyk/blocker-setup/assets/73010708/40198da4-1565-40d1-baae-e97395709ddf)
