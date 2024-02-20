@@ -94,4 +94,12 @@ Should look something like this:
 
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/2e3198ac-d21c-47fa-b4f1-3b55600ec1c6)
 
-14. And for hosts file located at C:\Windows\System32\drivers\etc, ...
+14. And for hosts file located at C:\Windows\System32\drivers\etc I added these entries to block the marketplace (websites can be accessed through their extensions and Cold Turkey and FocusMe can't block them)
+
+127.0.0.1 plugins.jetbrains.com
+127.0.0.1 marketplace.visualstudio.com
+
+After adding these entries, these permissions should be denied:
+
+![image](https://github.com/molodchyk/blocker-setup/assets/73010708/72abf637-afd3-49cd-a229-d0a7689d4ecf)
+
