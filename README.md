@@ -87,3 +87,11 @@ To something like this:
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/1da15769-a545-4fde-a996-eca0e2ea83c6)
 
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/40198da4-1565-40d1-baae-e97395709ddf)
+
+11. Remove permissions for Cold Turkey folders (both in C:\Program Files and in C:\ProgramData) and for hosts file located at C:\Windows\System32\drivers\etc. Click on folder -> properties -> security -> advanced -> add -> select a principal -> advanced -> find now -> select administrators PC -> click ok -> for type, click deny -> show advanced permissions -> select list folder / read data and delete -> click ok -> click ok -> click ok. The same for hosts file after adding the sites you wanted to block there.
+
+
+![Screenshot 2024-02-20 104810](https://github.com/molodchyk/blocker-setup/assets/73010708/a10fab80-1a7e-46eb-bb72-ba28d7f9d3f9)
+
+
+
