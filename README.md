@@ -16,7 +16,7 @@ This removes web results in the windows start:
 
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/c553f96b-0620-4752-89b7-397cb68dd46f)
 
-4. Disable Incognito Mode on Chrome
+3. Disable Incognito Mode on Chrome
 
 regedit -> Computer\HKEY_CURRENT_USER\Software\Policies\Google\Chrome -> REG_DWORD -> set value 1
 
@@ -26,7 +26,7 @@ now it looks like this:
 
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/1d92000f-4c3f-4290-be17-7e92a291148d)
 
-5. Disable Guest Mode on Chrome
+4. Disable Guest Mode on Chrome
 
 regedit -> Computer\HKEY_CURRENT_USER\Software\Policies\Google\Chrome -> BrowserGuestModeEnabled -> leave the value to 0.
 
@@ -36,7 +36,7 @@ now the profiles window looks like this:
 
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/61fa17db-6fec-4e24-a30a-eeacaa3b778f)
 
-6. Disable adding new users to chrome
+5. Disable adding new users to chrome
 
 regedit -> Computer\HKEY_CURRENT_USER\Software\Policies\Google\Chrome -> BrowserAddPersonEnabled -> leave the value to 0.
 
@@ -44,7 +44,7 @@ now the profiles window looks like this:
 
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/23fa73e3-b7fb-4aa7-a3f2-e669c4ebe2e8)
 
-7. Enforce the english language as the UI language of the windows
+6. Enforce the english language as the UI language of the windows
 
 Nls\Language looks like this:
 
@@ -64,14 +64,14 @@ Settings should look like this (now, we can't change the UI language)
 
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/ae18fa4f-9fd7-4089-9aa5-cdc7f4407221)
 
-8. Our next step is to disable changing time and time zone in settings. It seems impossible to do it in regedit, so we will try to enable local group policy editor and local security policy.
+7. Our next step is to disable changing time and time zone in settings. It seems impossible to do it in regedit, so we will try to enable local group policy editor and local security policy.
 
 I actually have no idea how robust adding these feature is, and even what it does, but here is the script to paste into cmd with admin rights:
 
 FOR %F IN ("%SystemRoot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~*.mum") DO (DISM /Online /NoRestart /Add-Package:"%F")
 FOR %F IN ("%SystemRoot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~*.mum") DO (DISM /Online /NoRestart /Add-Package:"%F")
 
-9. Now that we've activated these, press start + R to open Run, and type in secpol.msc and press Enter. Here, for "Change the system time" and "Change the time zone" leave only LOCAL SERVICE. Click Remove to remove the other users and click Apply and then Enter.
+8. Now that we've activated these, press start + R to open Run, and type in secpol.msc and press Enter. Here, for "Change the system time" and "Change the time zone" leave only LOCAL SERVICE. Click Remove to remove the other users and click Apply and then Enter.
 
 It should change from something like this:
 
@@ -81,20 +81,13 @@ To something like this:
 
 ![Screenshot 2024-02-17 011427](https://github.com/molodchyk/blocker-setup/assets/73010708/bd6691f6-81b3-4a2e-8e89-6c744677b1ab)
 
-10. FocusMe settings:
-
-
-![image](https://github.com/molodchyk/blocker-setup/assets/73010708/1da15769-a545-4fde-a996-eca0e2ea83c6)
-
-![image](https://github.com/molodchyk/blocker-setup/assets/73010708/40198da4-1565-40d1-baae-e97395709ddf)
-
-11. Remove permissions for Cold Turkey folders (both in C:\Program Files and in C:\ProgramData). Click on folder -> properties -> security -> advanced -> disable inheritance -> convert inherited permissions into explicit permissions on this object -> add -> select a principal -> advanced -> find now -> select administrators PC -> click ok -> for type, click deny -> for applies to, select "this folder only" -> show advanced permissions -> select ONLY list folder / read data -> click ok -> click ok -> click ok.
+9. Remove permissions for Cold Turkey folders (both in C:\Program Files and in C:\ProgramData). Click on folder -> properties -> security -> advanced -> disable inheritance -> convert inherited permissions into explicit permissions on this object -> add -> select a principal -> advanced -> find now -> select administrators PC -> click ok -> for type, click deny -> for applies to, select "this folder only" -> show advanced permissions -> select ONLY list folder / read data -> click ok -> click ok -> click ok.
 
 Should look something like this:
 
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/2e3198ac-d21c-47fa-b4f1-3b55600ec1c6)
 
-14. And for hosts file located at C:\Windows\System32\drivers\etc I added these entries to block the marketplace (websites can be accessed through their extensions and Cold Turkey and FocusMe can't block them)
+10. And for hosts file located at C:\Windows\System32\drivers\etc I added these entries to block the marketplace (websites can be accessed through their extensions and Cold Turkey and FocusMe can't block them)
 
 127.0.0.1 plugins.jetbrains.com
 127.0.0.1 marketplace.visualstudio.com
@@ -103,7 +96,7 @@ After adding these entries, these permissions should be denied:
 
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/72abf637-afd3-49cd-a229-d0a7689d4ecf)
 
-15. Add the URL from channel blocker to URLBlocklist to block removing entries:
+11. Add the URL from channel blocker to URLBlocklist to block removing entries:
 
 go to regedit -> navigate to Computer\HKEY_CURRENT_USER\Software\Policies\Google\Chrome -> create folder URLBlocklist -> add a string and name it "1", add the URL of the extension, for example: chrome-extension://nfkmalbckemmklibjddenhnofgnfcdfp/ui/config/html/config.html
 
@@ -111,7 +104,9 @@ go to regedit -> navigate to Computer\HKEY_CURRENT_USER\Software\Policies\Google
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/37b54461-9214-448c-bffb-f5721d557e84)
 
 
-16. FocusMe settings:
+12. FocusMe settings:
+
+![image](https://github.com/molodchyk/blocker-setup/assets/73010708/12127227-9082-4451-8bae-e9d25d0662e7)
 
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/d7fdecba-32c5-4b87-9252-37093da3a7bf)
 
