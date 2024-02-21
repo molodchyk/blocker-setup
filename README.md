@@ -108,3 +108,8 @@ go to regedit -> navigate to Computer\HKEY_CURRENT_USER\Software\Policies\Google
 
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/12127227-9082-4451-8bae-e9d25d0662e7)
 
+13. Enforce extensions:
+
+![Screenshot 2024-02-21 110210](https://github.com/molodchyk/blocker-setup/assets/73010708/575b3345-bc99-4167-927b-eb6237a9284a)
+
+
