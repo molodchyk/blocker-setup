@@ -103,3 +103,11 @@ After adding these entries, these permissions should be denied:
 
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/72abf637-afd3-49cd-a229-d0a7689d4ecf)
 
+15. Add the URL from channel blocker to URLBlocklist to block removing entries:
+
+go to regedit -> navigate to Computer\HKEY_CURRENT_USER\Software\Policies\Google\Chrome -> create folder URLBlocklist -> add a string and name it "1", add the URL of the extension, for example: chrome-extension://nfkmalbckemmklibjddenhnofgnfcdfp/ui/config/html/config.html
+
+
+![image](https://github.com/molodchyk/blocker-setup/assets/73010708/37b54461-9214-448c-bffb-f5721d557e84)
+
+
