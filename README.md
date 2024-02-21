@@ -108,5 +108,3 @@ go to regedit -> navigate to Computer\HKEY_CURRENT_USER\Software\Policies\Google
 
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/12127227-9082-4451-8bae-e9d25d0662e7)
 
-![image](https://github.com/molodchyk/blocker-setup/assets/73010708/d7fdecba-32c5-4b87-9252-37093da3a7bf)
-
