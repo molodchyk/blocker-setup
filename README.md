@@ -110,6 +110,7 @@ go to regedit -> navigate to Computer\HKEY_CURRENT_USER\Software\Policies\Google
 
 13. Enforce extensions:
 
-![Screenshot 2024-02-21 110210](https://github.com/molodchyk/blocker-setup/assets/73010708/575b3345-bc99-4167-927b-eb6237a9284a)
+![image](https://github.com/molodchyk/blocker-setup/assets/73010708/828db37e-711f-4e7f-9784-203b6e3f5444)
+
 
 
