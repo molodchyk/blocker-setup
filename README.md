@@ -111,3 +111,7 @@ go to regedit -> navigate to Computer\HKEY_CURRENT_USER\Software\Policies\Google
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/37b54461-9214-448c-bffb-f5721d557e84)
 
 
+16. FocusMe settings:
+
+![image](https://github.com/molodchyk/blocker-setup/assets/73010708/d7fdecba-32c5-4b87-9252-37093da3a7bf)
+
