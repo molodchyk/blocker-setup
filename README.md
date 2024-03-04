@@ -113,4 +113,16 @@ go to regedit -> navigate to Computer\HKEY_CURRENT_USER\Software\Policies\Google
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/828db37e-711f-4e7f-9784-203b6e3f5444)
 
 
+14. Download platform-tools folder. Connect BOOX Note 2 e reader to your PC via USB. Enable USB Debug Mode.
+
+![image](https://github.com/molodchyk/blocker-setup/assets/73010708/ecd8647e-535b-42a4-ac05-da4cc9d5f142)
+
+
+Right click timelimit.bat. Click "Run as Administrator". In "Do you want to make changes to your device?" window, click Yes. 
+
+Now ebook apps tab looks like this, even when having "Enable Google Play" "on"
+
+![image](https://github.com/molodchyk/blocker-setup/assets/73010708/e028e345-0d4e-4764-8bc5-2cde73715db1)
+
+![image](https://github.com/molodchyk/blocker-setup/assets/73010708/31129408-41e7-4c63-816c-46b096507759)
 
