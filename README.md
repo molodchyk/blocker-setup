@@ -118,9 +118,41 @@ go to regedit -> navigate to Computer\HKEY_CURRENT_USER\Software\Policies\Google
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/ecd8647e-535b-42a4-ac05-da4cc9d5f142)
 
 
-Right click timelimit.bat. Click "Run as Administrator". In "Do you want to make changes to your device?" window, click Yes. 
+First, we probably need to add platform-tools to the PATH. 
+
+Search for Environment Variables:
+
+Right-click on the 'Start' button and select 'System'.
+Click on 'Advanced system settings' on the left sidebar.
+In the 'System Properties' window, click on the 'Environment Variables...' button near the bottom.
+Edit the PATH Environment Variable:
+
+In the 'Environment Variables' window, under the 'System variables' section, scroll and find the Path variable, then click 'Edit...'.
+Add the New Path:
+
+In the 'Edit Environment Variable' window, click 'New' and then paste the path to your platform-tools directory: C:\Users\molod(""OR WHATEVER USER NAME YOU WILL HAVE HERE"")\AppData\Local\Android\Sdk\platform-tools.
+Save the Changes:
+
+Click 'OK' to close the 'Edit Environment Variable' window.
+Click 'OK' again to close the 'Environment Variables' window.
+Click 'OK' once more to close the 'System Properties' window.
+
+Right click timelimit.bat. 
+
+timelimit.bat contains the following script:
+
+adb.exe shell pm uninstall -k --user 0 com.android.vending
+adb.exe shell pm uninstall -k --user 0 com.google.android.gms
+adb.exe shell pm uninstall -k --user 0 com.android.email
+adb.exe shell pm uninstall -k --user 0 com.onyx.mail
+pause
+
+
+Click "Run as Administrator". In "Do you want to make changes to your device?" window, click Yes. 
 
 Now ebook apps tab looks like this, even when having "Enable Google Play" "on"
+
+
 
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/e028e345-0d4e-4764-8bc5-2cde73715db1)
 
