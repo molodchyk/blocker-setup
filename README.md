@@ -158,3 +158,58 @@ Now ebook apps tab looks like this, even when having "Enable Google Play" "on"
 
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/31129408-41e7-4c63-816c-46b096507759)
 
+
+15. Here I will keep track of Samsung's system apps I uninstalled. 
+
+adb.exe shell pm uninstall -k --user 0 com.samsung.android.kidsinstaller
+adb.exe shell pm uninstall -k --user 0 com.samsung.storyservice
+adb.exe shell pm uninstall -k --user 0 com.samsung.android.app.cocktailbarservice
+adb.exe shell pm uninstall -k --user 0 com.samsung.android.themestore
+adb.exe shell pm uninstall -k --user 0 com.sec.android.app.vepreload
+adb.exe shell pm uninstall -k --user 0 com.samsung.android.app.dressroom
+adb.exe shell pm uninstall -k --user 0 com.sec.android.easyonehand
+
+&:: related to wallpapers and icons I have downloaded from Themes or Wallpaper and style apps
+adb.exe shell pm uninstall -k --user 0 minuhome.Earth.aodonly
+adb.exe shell pm uninstall -k --user 0 com.xuanthai.NeonGalaxyAOD.aodonly
+adb.exe shell pm uninstall -k --user 0 phinton_art.com.FREE_Moon_Light.aodonly
+adb.exe shell pm uninstall -k --user 0 com.Maythemes.PicnicRabbits.aod.aodonly
+
+adb.exe shell pm uninstall -k --user 0 com.einsindrei.EarthIIAOD
+adb.exe shell pm uninstall -k --user 0 darkartcreations.AuroraNightsRT
+adb.exe shell pm uninstall -k --user 0 com.pixome.ColorfulCheshire
+adb.exe shell pm uninstall -k --user 0 com.xuanthai.tinyshootsfree
+
+adb.exe shell pm uninstall -k --user 0 com.xuanthai.tinyshootsfree.callbg
+adb.exe shell pm uninstall -k --user 0 com.pixome.ColorfulCheshire.callbg
+adb.exe shell pm uninstall -k --user 0 kr.co.cogulplanet.www.SimpleRainbowPlaent.callbg
+adb.exe shell pm uninstall -k --user 0 darkartcreations.AuroraNightsRT.callbg
+
+adb.exe shell pm uninstall -k --user 0 com.pixome.ColorfulCheshire.home
+adb.exe shell pm uninstall -k --user 0 com.einsindrei.EarthIIAOD.home
+adb.exe shell pm uninstall -k --user 0 com.xuanthai.tinyshootsfree.home
+adb.exe shell pm uninstall -k --user 0 darkartcreations.AuroraNightsRT.home
+adb.exe shell pm uninstall -k --user 0 kr.co.cogulplanet.www.SimpleRainbowPlaent.home
+
+& ::these I just think are wallpapers or icons I at some point downloaded
+adb.exe shell pm uninstall -k --user 0 kimiroll.blog.me.Bluenight.wallpaperpack
+adb.exe shell pm uninstall -k --user 0 com.einsindrei.EarthIIAOD.wallpaper
+adb.exe shell pm uninstall -k --user 0 com.pixome.ColorfulCheshire.wallpaper
+adb.exe shell pm uninstall -k --user 0 com.xuanthai.tinyshootsfree.wallpaper
+adb.exe shell pm uninstall -k --user 0 darkartcreations.AuroraNightsRT.wallpaper
+adb.exe shell pm uninstall -k --user 0 kr.co.cogulplanet.www.SimpleRainbowPlaent.wallpaper
+
+adb.exe shell pm uninstall -k --user 0 xiehanying.Starsgalaxypurple.wallpaperpack
+
+adb.exe shell pm uninstall -k --user 0 FelipeLeite.BlackestOS.appiconpack
+adb.exe shell pm uninstall -k --user 0 SR.BeautifulForest.appiconpack
+adb.exe shell pm uninstall -k --user 0 XIEHANYING.samsungtheme.NostalgiaO2_Wind.appiconpack
+adb.exe shell pm uninstall -k --user 0 gabrielsantana.SimpleBlack.appiconpack
+
+adb.exe shell pm uninstall -k --user 0 com.einsindrei.EarthIIAOD.appicon
+adb.exe shell pm uninstall -k --user 0 com.pixome.ColorfulCheshire.appicon
+adb.exe shell pm uninstall -k --user 0 com.xuanthai.tinyshootsfree.appicon
+adb.exe shell pm uninstall -k --user 0 darkartcreations.AuroraNightsRT.appicon
+adb.exe shell pm uninstall -k --user 0 kr.co.cogulplanet.www.SimpleRainbowPlaent.appicon
+
+pause
