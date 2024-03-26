@@ -1,4 +1,4 @@
-# blocker-setup
+# Blocker setup
 
 This is a guide for me for when I'm setting up blocker configuration for my new laptop/PC.
 
@@ -159,8 +159,53 @@ Now ebook apps tab looks like this, even when having "Enable Google Play" "on"
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/31129408-41e7-4c63-816c-46b096507759)
 
 
-15. Here I will keep track of Samsung's system apps I uninstalled. 
+15. Here I will keep track of Samsung's system apps I uninstalled.
 
+
+
+
+found this list made by google:
+
+
+Critical Android system apps
+Some system apps are critical for a device to function correctly. We do not recommend blocking or hiding these critical system apps:
+
+android
+com.android.bluetooth
+com.android.contacts
+com.android.keychain
+com.android.keyguard
+com.android.launcher
+com.android.nfc
+com.android.phone
+com.android.providers.downloads
+com.android.settings
+com.android.systemui
+com.android.vending
+com.google.android.deskclock
+com.google.android.dialer
+com.google.android.gms
+com.google.android.GoogleCamera
+com.google.android.googlequicksearchbox
+com.google.android.gsf
+com.google.android.gsf.login
+com.google.android.inputmethod.latin
+com.google.android.marvin.talkback
+com.google.android.nfcprovision
+com.google.android.setupwizard
+com.google.android.webview
+com.samsung.android.contacts
+com.samsung.android.phone
+
+Android accessibility apps
+Some Android system apps are for accessibility. We do not recommend blocking or hiding these apps:
+
+com.google.android.accessibility.soundamplifier
+com.google.audio.hearing.visualization.accessibility.scribe
+
+
+
+::3/25/2024
 adb.exe shell pm uninstall -k --user 0 com.samsung.android.kidsinstaller
 adb.exe shell pm uninstall -k --user 0 com.samsung.storyservice
 adb.exe shell pm uninstall -k --user 0 com.samsung.android.app.cocktailbarservice
@@ -169,7 +214,7 @@ adb.exe shell pm uninstall -k --user 0 com.sec.android.app.vepreload
 adb.exe shell pm uninstall -k --user 0 com.samsung.android.app.dressroom
 adb.exe shell pm uninstall -k --user 0 com.sec.android.easyonehand
 
-&:: related to wallpapers and icons I have downloaded from Themes or Wallpaper and style apps
+:: related to wallpapers and icons I have downloaded from Themes or Wallpaper and style apps
 adb.exe shell pm uninstall -k --user 0 minuhome.Earth.aodonly
 adb.exe shell pm uninstall -k --user 0 com.xuanthai.NeonGalaxyAOD.aodonly
 adb.exe shell pm uninstall -k --user 0 phinton_art.com.FREE_Moon_Light.aodonly
@@ -191,7 +236,7 @@ adb.exe shell pm uninstall -k --user 0 com.xuanthai.tinyshootsfree.home
 adb.exe shell pm uninstall -k --user 0 darkartcreations.AuroraNightsRT.home
 adb.exe shell pm uninstall -k --user 0 kr.co.cogulplanet.www.SimpleRainbowPlaent.home
 
-& ::these I just think are wallpapers or icons I at some point downloaded
+::these I just think are wallpapers or icons I at some point downloaded
 adb.exe shell pm uninstall -k --user 0 kimiroll.blog.me.Bluenight.wallpaperpack
 adb.exe shell pm uninstall -k --user 0 com.einsindrei.EarthIIAOD.wallpaper
 adb.exe shell pm uninstall -k --user 0 com.pixome.ColorfulCheshire.wallpaper
@@ -211,5 +256,19 @@ adb.exe shell pm uninstall -k --user 0 com.pixome.ColorfulCheshire.appicon
 adb.exe shell pm uninstall -k --user 0 com.xuanthai.tinyshootsfree.appicon
 adb.exe shell pm uninstall -k --user 0 darkartcreations.AuroraNightsRT.appicon
 adb.exe shell pm uninstall -k --user 0 kr.co.cogulplanet.www.SimpleRainbowPlaent.appicon
+
+::3/26/2024
+adb.exe shell pm uninstall -k --user 0 com.samsung.knox.securefolder
+adb.exe shell pm uninstall -k --user 0 com.samsung.android.fast
+adb.exe shell pm uninstall -k --user 0 com.samsung.android.forest
+adb.exe shell pm uninstall -k --user 0 com.google.audio.hearing.visualization.accessibility.scribe
+adb.exe shell pm uninstall -k --user 0 com.samsung.android.app.notes.addons
+adb.exe shell pm uninstall -k --user 0 com.samsung.android.mdecservice
+adb.exe shell pm uninstall -k --user 0 com.samsung.android.lool
+adb.exe shell pm uninstall -k --user 0 com.sec.android.widgetapp.webmanual
+adb.exe shell pm uninstall -k --user 0 com.samsung.android.vtcamerasettings
+adb.exe shell pm uninstall -k --user 0 com.samsung.android.smartsuggestions
+adb.exe shell pm uninstall -k --user 0 com.sec.android.easyMover.Agent
+adb.exe shell pm uninstall -k --user 0 com.samsung.android.mcfserver
 
 pause
