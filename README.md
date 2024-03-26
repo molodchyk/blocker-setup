@@ -161,7 +161,7 @@ Now ebook apps tab looks like this, even when having "Enable Google Play" "on"
 
 15. Here I will keep track of Samsung's system apps I uninstalled.
 
-
+Unfortunately there is script that enables them back and without rooting the phone it seems there is no way to remove that capability. But I just blocked the "adb shell" keyword from chat.openai.com and google.com so my hope is that I don't really remembered it and can't search it/ the reward effort calculation in my mind makes it not worth it. 
 
 
 found this list made by google:
