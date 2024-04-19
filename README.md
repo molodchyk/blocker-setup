@@ -280,5 +280,8 @@ adb.exe shell pm uninstall -k --user 0 com.sec.android.easyMover
 adb.exe shell pm uninstall -k --user 0 com.samsung.android.app.spage
 adb.exe shell pm uninstall -k --user 0 com.samsung.android.mdx
 adb.exe shell pm uninstall -k --user 0 com.sec.android.mimage.avatarstickers
+adb.exe shell pm uninstall -k --user 0 com.samsung.android.visionintelligence
+adb.exe shell pm uninstall -k --user 0 com.samsung.android.bixby.agent
+adb.exe shell pm uninstall -k --user 0 com.sec.android.app.samsungapps
 
 pause
