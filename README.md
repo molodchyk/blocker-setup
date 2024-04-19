@@ -273,4 +273,12 @@ adb.exe shell pm uninstall -k --user 0 com.samsung.android.mcfserver
 adb.exe shell pm uninstall -k --user 0 com.samsung.android.inputshare
 adb.exe shell pm uninstall -k --user 0 com.sec.unifiedwfc
 
+::3/26/2024
+adb.exe shell pm uninstall -k --user 0 com.samsung.android.bixby.wakeup
+adb.exe shell pm uninstall -k --user 0 de.axelspringer.yana.zeropage
+adb.exe shell pm uninstall -k --user 0 com.sec.android.easyMover
+adb.exe shell pm uninstall -k --user 0 com.samsung.android.app.spage
+adb.exe shell pm uninstall -k --user 0 com.samsung.android.mdx
+adb.exe shell pm uninstall -k --user 0 com.sec.android.mimage.avatarstickers
+
 pause
