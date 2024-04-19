@@ -272,6 +272,5 @@ adb.exe shell pm uninstall -k --user 0 com.sec.android.easyMover.Agent
 adb.exe shell pm uninstall -k --user 0 com.samsung.android.mcfserver
 adb.exe shell pm uninstall -k --user 0 com.samsung.android.inputshare
 adb.exe shell pm uninstall -k --user 0 com.sec.unifiedwfc
-adb.exe shell pm uninstall -k --user 0 com.samsung.android.app.aodservice
 
 pause
