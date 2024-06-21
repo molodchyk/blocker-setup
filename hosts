@@ -1,0 +1,97 @@
+# this is my legacy hosts file. I used it when programming, to disable myself from
+# using plugins because they have browser features that make blockers obsolete. 
+#
+# The second set of website blocks targeted the google's remote device servers. 
+# This google's feature enables you to run the remote device, making the blockers obsolete as well
+#
+# In 2024 my goal is to learn german to know it better then germans themselves, so I will block 
+# IntelliJ and Android Studio for now instead to focus all my attention on german.
+
+
+127.0.0.1 plugins.jetbrains.com
+127.0.0.1 marketplace.visualstudio.com
+
+
+
+
+127.0.0.1 testlab.samsung.com
+127.0.0.1 rdb.samsung.com
+127.0.0.1 d3unf4s5rp9dfh.cloudfront.net
+127.0.0.1 firebase.googleapis.com
+127.0.0.1 device-streaming.googleapis.com
+127.0.0.1 testlab.sandbox.googleapis.com
+127.0.0.1 console.firebase.google.com
+127.0.0.1 firebase.google.com
+127.0.0.1 firebaseremoteconfig.googleapis.com
+127.0.0.1 firebaselogging.googleapis.com
+127.0.0.1 cloud.google.com
+127.0.0.1 cloudfunctions.googleapis.com
+127.0.0.1 cloudstorage.googleapis.com
+127.0.0.1 remote.samsungdevelopers.com
+127.0.0.1 *.cloudfront.net
+127.0.0.1 dl.google.com
+127.0.0.1 tools.android.com
+127.0.0.1 android.googleapis.com
+127.0.0.1 play.googleapis.com
+127.0.0.1 clients4.google.com
+127.0.0.1 clients2.google.com
+127.0.0.1 update.googleapis.com
+127.0.0.1 connectivitycheck.android.com
+127.0.0.1 android.clients.google.com
+127.0.0.1 content-autofill.googleapis.com
+127.0.0.1 cloudbilling.googleapis.com
+127.0.0.1 cloudresourcemanager.googleapis.com
+127.0.0.1 testing.googleapis.com
+127.0.0.1 clientservices.googleapis.com
+127.0.0.1 optimizationguide-pa.googleapis.com
+127.0.0.1 www.googleapis.com
+127.0.0.1 mtalk.google.com
+127.0.0.1 jnn-pa.googleapis.com
+127.0.0.1 photos-ugc.l.googleusercontent.com
+127.0.0.1 www3.l.google.com
+127.0.0.1 yt3.ggpht.com
+127.0.0.1 accounts.youtube.com
+127.0.0.1 suggestqueries-clients6.youtube.com
+127.0.0.1 static.doubleclick.net
+127.0.0.1 android.clients.google.com
+127.0.0.1 connectivitycheck.gstatic.com
+127.0.0.1 connectivitycheck.android.com
+127.0.0.1 googleapis.com
+127.0.0.1 android.googlesource.com
+127.0.0.1 source.android.com
+127.0.0.1 maven.google.com
+127.0.0.1 maven.pkg.github.com
+127.0.0.1 repository.cloudera.com
+127.0.0.1 dl.google.com
+127.0.0.1 www.google-analytics.com
+127.0.0.1 update.googleapis.com
+127.0.0.1 clients1.google.com
+127.0.0.1 clients2.google.com
+127.0.0.1 clients3.google.com
+127.0.0.1 clients4.google.com
+127.0.0.1 clients5.google.com
+127.0.0.1 clients6.google.com
+127.0.0.1 connectivitycheck.gstatic.com
+127.0.0.1 connectivitycheck.android.com
+127.0.0.1 dl.google.com
+127.0.0.1 tools.android.com
+127.0.0.1 maven.google.com
+127.0.0.1 dl-ssl.google.com
+127.0.0.1 www.google-analytics.com
+127.0.0.1 android.clients.google.com
+127.0.0.1 connectivitycheck.gstatic.com
+127.0.0.1 crl.gstatic.com
+127.0.0.1 cloud.google.com
+127.0.0.1 firebase.google.com
+127.0.0.1 firebaseremoteconfig.googleapis.com
+127.0.0.1 firebaselogging.googleapis.com
+127.0.0.1 gemini.google.com
+127.0.0.1 generativelanguage.googleapis.com
+127.0.0.1 gemini-pro.googleapis.com
+127.0.0.1 aistudio.google.com
+127.0.0.1 makersuite.google.com
+127.0.0.1 ai.google.dev
+127.0.0.1 cloud.google.com
+127.0.0.1 vertexai.googleapis.com
+127.0.0.1 dl.google.com
+127.0.0.1 aida.googleapis.com
