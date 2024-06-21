@@ -1,11 +1,4 @@
-# this is my legacy hosts file. I used it when programming, to disable myself from
-# using plugins because they have browser features that make blockers obsolete. 
-#
-# The second set of website blocks targeted the google's remote device servers. 
-# This google's feature enables you to run the remote device, making the blockers obsolete as well
-#
-# In 2024 my goal is to learn german to know it better then germans themselves, so I will block 
-# IntelliJ and Android Studio for now instead to focus all my attention on german.
+# The legacy hosts file. Switch to blocking IntelliJ, Android Studio instead.
 
 
 127.0.0.1 plugins.jetbrains.com
