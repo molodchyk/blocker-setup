@@ -285,3 +285,14 @@ adb.exe shell pm uninstall -k --user 0 com.samsung.android.bixby.agent
 adb.exe shell pm uninstall -k --user 0 com.sec.android.app.samsungapps
 
 pause
+
+
+
+
+
+
+
+
+16. the place to store the password, permissions restriction:
+
+![image](https://github.com/user-attachments/assets/31b2f942-10ad-40ec-81ad-80542886fcdf)
