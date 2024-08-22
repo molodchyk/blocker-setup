@@ -292,6 +292,24 @@ pause
 
 adb.exe shell pm uninstall -k --user 0 com.android.calendar
 adb.exe shell pm uninstall -k --user 0 com.google.android.syncadapters.calendar
+adb.exe shell pm uninstall -k --user 0 com.onyx.easytransfer
+adb.exe shell pm uninstall -k --user 0 com.simplemobiletools.clock
+adb.exe shell pm uninstall -k --user 0 com.qualcomm.qti.sva
+adb.exe shell pm uninstall -k --user 0 com.simplemobiletools.voicerecorder
+adb.exe shell pm uninstall -k --user 0 com.simplemobiletools.musicplayer
+adb.exe shell pm uninstall -k --user 0 com.simplemobiletools.gallery
+adb.exe shell pm uninstall -k --user 0 com.onyx.dict
+adb.exe shell pm uninstall -k --user 0 com.onyx.appmarket
+adb.exe shell pm uninstall -k --user 0 com.onyx.calculator
+adb.exe shell pm uninstall -k --user 0 com.qualcomm.timeservice
+adb.exe shell pm uninstall -k --user 0 com.android.stk
+adb.exe shell pm uninstall -k --user 0 com.qualcomm.qti.poweroffalarm
+adb.exe shell pm uninstall -k --user 0 com.google.android.syncadapters.contacts
+adb.exe shell pm uninstall -k --user 0 com.google.android.tts
+adb.exe shell pm uninstall -k --user 0 com.google.android.gsf
+adb.exe shell pm uninstall -k --user 0 com.google.android.partnersetup
+adb.exe shell pm uninstall -k --user 0 com.qualcomm.qti.ims
+adb.exe shell pm uninstall -k --user 0 com.qti.dpmserviceapp
 pause
 
 
