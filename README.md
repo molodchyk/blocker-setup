@@ -288,7 +288,11 @@ pause
 
 
 
+::3/26/2024 boox note2
 
+adb.exe shell pm uninstall -k --user 0 com.android.calendar
+adb.exe shell pm uninstall -k --user 0 com.google.android.syncadapters.calendar
+pause
 
 
 
