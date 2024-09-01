@@ -288,7 +288,7 @@ pause
 
 
 
-::3/26/2024 boox note2
+::8/26/2024 boox note2
 
 adb.exe shell pm uninstall -k --user 0 com.android.calendar
 adb.exe shell pm uninstall -k --user 0 com.google.android.syncadapters.calendar
@@ -310,6 +310,11 @@ adb.exe shell pm uninstall -k --user 0 com.google.android.gsf
 adb.exe shell pm uninstall -k --user 0 com.google.android.partnersetup
 adb.exe shell pm uninstall -k --user 0 com.qualcomm.qti.ims
 adb.exe shell pm uninstall -k --user 0 com.qti.dpmserviceapp
+
+::9/1/2024 samsung
+adb.exe shell pm uninstall -k --user 0 com.google.android.partnersetup
+adb.exe shell pm uninstall -k --user 0 com.google.android.gms.supervision
+adb.exe shell pm uninstall -k --user 0 com.android.dreams.basic
 pause
 
 
