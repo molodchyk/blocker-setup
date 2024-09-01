@@ -315,6 +315,7 @@ adb.exe shell pm uninstall -k --user 0 com.qti.dpmserviceapp
 adb.exe shell pm uninstall -k --user 0 com.google.android.partnersetup
 adb.exe shell pm uninstall -k --user 0 com.google.android.gms.supervision
 adb.exe shell pm uninstall -k --user 0 com.android.dreams.basic
+adb.exe shell pm uninstall -k --user 0 com.samsung.app.newtrim
 
 :: probably samsung's OTA update app that keeps installing bloatware on the phone
 adb.exe shell pm uninstall -k --user 0 com.wssyncmldm
