@@ -12,11 +12,7 @@ This removes web results in the windows start:
 
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/6662bc99-9767-49fe-b4ec-0de81ee8a2b5)
 
-2. Remove the upper left arrow on Chrome
-
-![image](https://github.com/molodchyk/blocker-setup/assets/73010708/c553f96b-0620-4752-89b7-397cb68dd46f)
-
-3. Disable Incognito Mode on Chrome
+2. Disable Incognito Mode on Chrome
 
 regedit -> Computer\HKEY_CURRENT_USER\Software\Policies\Google\Chrome -> REG_DWORD -> set value 1
 
@@ -26,7 +22,7 @@ now it looks like this:
 
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/1d92000f-4c3f-4290-be17-7e92a291148d)
 
-4. Disable Guest Mode on Chrome
+3. Disable Guest Mode on Chrome
 
 regedit -> Computer\HKEY_CURRENT_USER\Software\Policies\Google\Chrome -> BrowserGuestModeEnabled -> leave the value to 0.
 
@@ -36,7 +32,7 @@ now the profiles window looks like this:
 
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/61fa17db-6fec-4e24-a30a-eeacaa3b778f)
 
-5. Disable adding new users to chrome
+4. Disable adding new users to chrome
 
 regedit -> Computer\HKEY_CURRENT_USER\Software\Policies\Google\Chrome -> BrowserAddPersonEnabled -> leave the value to 0.
 
@@ -44,7 +40,7 @@ now the profiles window looks like this:
 
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/23fa73e3-b7fb-4aa7-a3f2-e669c4ebe2e8)
 
-6. Enforce the english language as the UI language of the windows
+5. Enforce the english language as the UI language of the windows
 
 Nls\Language looks like this:
 
@@ -64,14 +60,14 @@ Settings should look like this (now, we can't change the UI language)
 
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/ae18fa4f-9fd7-4089-9aa5-cdc7f4407221)
 
-7. Our next step is to disable changing time and time zone in settings. It seems impossible to do it in regedit, so we will try to enable local group policy editor and local security policy.
+6. Our next step is to disable changing time and time zone in settings. It seems impossible to do it in regedit, so we will try to enable local group policy editor and local security policy.
 
 I actually have no idea how robust adding these feature is, and even what it does, but here is the script to paste into cmd with admin rights:
 
 FOR %F IN ("%SystemRoot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~*.mum") DO (DISM /Online /NoRestart /Add-Package:"%F")
 FOR %F IN ("%SystemRoot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~*.mum") DO (DISM /Online /NoRestart /Add-Package:"%F")
 
-8. Now that we've activated these, press start + R to open Run, and type in secpol.msc and press Enter. Here, for "Change the system time" and "Change the time zone" leave only LOCAL SERVICE. Click Remove to remove the other users and click Apply and then Enter.
+7. Now that we've activated these, press start + R to open Run, and type in secpol.msc and press Enter. Here, for "Change the system time" and "Change the time zone" leave only LOCAL SERVICE. Click Remove to remove the other users and click Apply and then Enter.
 
 It should change from something like this:
 
@@ -81,13 +77,13 @@ To something like this:
 
 ![Screenshot 2024-02-17 011427](https://github.com/molodchyk/blocker-setup/assets/73010708/bd6691f6-81b3-4a2e-8e89-6c744677b1ab)
 
-9. Remove permissions for Cold Turkey folders (both in C:\Program Files and in C:\ProgramData). Click on folder -> properties -> security -> advanced -> disable inheritance -> convert inherited permissions into explicit permissions on this object -> add -> select a principal -> advanced -> find now -> select administrators PC -> click ok -> for type, click deny -> for applies to, select "this folder only" -> show advanced permissions -> select ONLY list folder / read data -> click ok -> click ok -> click ok.
+8. Remove permissions for Cold Turkey folders (both in C:\Program Files and in C:\ProgramData). Click on folder -> properties -> security -> advanced -> disable inheritance -> convert inherited permissions into explicit permissions on this object -> add -> select a principal -> advanced -> find now -> select administrators PC -> click ok -> for type, click deny -> for applies to, select "this folder only" -> show advanced permissions -> select ONLY list folder / read data -> click ok -> click ok -> click ok.
 
 Should look something like this:
 
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/2e3198ac-d21c-47fa-b4f1-3b55600ec1c6)
 
-10. And for hosts file located at C:\Windows\System32\drivers\etc I added these entries to block the marketplace (websites can be accessed through their extensions and Cold Turkey and FocusMe can't block them)
+9. And for hosts file located at C:\Windows\System32\drivers\etc I added these entries to block the marketplace (websites can be accessed through their extensions and Cold Turkey and FocusMe can't block them)
 
 127.0.0.1 plugins.jetbrains.com
 127.0.0.1 marketplace.visualstudio.com
@@ -96,7 +92,7 @@ After adding these entries, these permissions should be denied:
 
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/72abf637-afd3-49cd-a229-d0a7689d4ecf)
 
-11. Add the URL from channel blocker to URLBlocklist to block removing entries:
+10. Add the URL from channel blocker to URLBlocklist to block removing entries:
 
 go to regedit -> navigate to Computer\HKEY_CURRENT_USER\Software\Policies\Google\Chrome -> create folder URLBlocklist -> add a string and name it "1", add the URL of the extension, for example: chrome-extension://nfkmalbckemmklibjddenhnofgnfcdfp/ui/config/html/config.html
 
@@ -104,16 +100,16 @@ go to regedit -> navigate to Computer\HKEY_CURRENT_USER\Software\Policies\Google
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/37b54461-9214-448c-bffb-f5721d557e84)
 
 
-12. FocusMe settings:
+11. FocusMe settings:
 
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/12127227-9082-4451-8bae-e9d25d0662e7)
 
-13. Enforce extensions:
+12. Enforce extensions:
 
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/828db37e-711f-4e7f-9784-203b6e3f5444)
 
 
-14. Download platform-tools folder. Connect BOOX Note 2 e reader to your PC via USB. Enable USB Debug Mode.
+13. Download platform-tools folder. Connect BOOX Note 2 e reader to your PC via USB. Enable USB Debug Mode.
 
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/ecd8647e-535b-42a4-ac05-da4cc9d5f142)
 
@@ -159,7 +155,7 @@ Now ebook apps tab looks like this, even when having "Enable Google Play" "on"
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/31129408-41e7-4c63-816c-46b096507759)
 
 
-15. Here I will keep track of Samsung's system apps I uninstalled.
+14. Here I will keep track of Samsung's system apps I uninstalled.
 
 Unfortunately there is script that enables them back and without rooting the phone it seems there is no way to remove that capability. But I just blocked the "adb shell" keyword from chat.openai.com and google.com so my hope is that I don't really remembered it and can't search it/ the reward effort calculation in my mind makes it not worth it. 
 
