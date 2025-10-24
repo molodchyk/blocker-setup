@@ -324,3 +324,6 @@ pause
 16. the place to store the password, permissions restriction:
 
 ![image](https://github.com/user-attachments/assets/31b2f942-10ad-40ec-81ad-80542886fcdf)
+
+<img width="931" height="598" alt="Screenshot 2025-10-24 041534" src="https://github.com/user-attachments/assets/9fc8eb1d-fb4f-4d9c-9b54-d8c0fb1ee4f4" />
+
