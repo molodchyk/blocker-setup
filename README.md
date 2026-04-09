@@ -334,6 +334,9 @@ pause
 17. My guess is that you can mess with chrome.exe and this breaks blockers, so we deny access to the executable by changing Chrome directory permissions:
 <img width="933" height="610" alt="image" src="https://github.com/user-attachments/assets/9cae9703-f228-43be-b6cf-c0d05e9920ab" />
 
+18. Application (Chrome)
+
+<img width="928" height="605" alt="image" src="https://github.com/user-attachments/assets/f49a397f-8765-4424-bfad-3dfe12c219ca" />
 
 
 
