@@ -331,5 +331,9 @@ pause
 
 <img width="648" height="543" alt="{E3B228CA-6C29-467B-A828-93C71875F0B5}" src="https://github.com/user-attachments/assets/549d4c69-47c6-4b10-9f57-0d904bbc0d31" />
 
+17. My guess is that you can mess with chrome.exe and this breaks blockers, so we deny access to the executable by changing Chrome directory permissions:
+<img width="933" height="610" alt="image" src="https://github.com/user-attachments/assets/9cae9703-f228-43be-b6cf-c0d05e9920ab" />
+
+
 
 
