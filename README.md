@@ -341,3 +341,7 @@ pause
 <img width="790" height="573" alt="Screenshot 2026-04-23 081220" src="https://github.com/user-attachments/assets/6fc9a154-434e-4bbc-b27d-531ce75ec586" />
 
 
+19. DNS porn block on windows:
+Settings -> Network & internet -> Wi-Fi
+
+<img width="506" height="702" alt="image" src="https://github.com/user-attachments/assets/73e44769-8c45-4e8f-8129-4a8d6a83d36d" />
