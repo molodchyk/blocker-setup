@@ -345,3 +345,8 @@ pause
 Settings -> Network & internet -> Wi-Fi
 
 <img width="506" height="702" alt="image" src="https://github.com/user-attachments/assets/73e44769-8c45-4e8f-8129-4a8d6a83d36d" />
+
+20. for another password save
+
+<img width="923" height="604" alt="image" src="https://github.com/user-attachments/assets/79da4685-4553-49fe-8538-784eeb4806be" />
+
