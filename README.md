@@ -350,3 +350,6 @@ Settings -> Network & internet -> Wi-Fi
 
 <img width="923" height="604" alt="image" src="https://github.com/user-attachments/assets/79da4685-4553-49fe-8538-784eeb4806be" />
 
+21. Prevent disabling NextDNS by removing programs' deskbar icons from showing
+
+<img width="1083" height="446" alt="image" src="https://github.com/user-attachments/assets/7ded41ca-8114-400e-abbf-22e9daaff2de" />
