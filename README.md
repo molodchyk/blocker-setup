@@ -353,3 +353,8 @@ Settings -> Network & internet -> Wi-Fi
 21. Prevent disabling NextDNS by removing programs' deskbar icons from showing
 
 <img width="1083" height="446" alt="image" src="https://github.com/user-attachments/assets/7ded41ca-8114-400e-abbf-22e9daaff2de" />
+
+22. Block NextDNS folder in C:\Program Files (x86)
+
+<img width="928" height="601" alt="image" src="https://github.com/user-attachments/assets/c44b1039-dd5e-4df9-89ff-6d7072dbf3ff" />
+
