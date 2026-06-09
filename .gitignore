@@ -1,0 +1,29 @@
+# OS and editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+
+# Local scratch space and extracted archives
+tmp/
+temp/
+scratch/
+extract/
+extracted/
+
+# Logs and transient command output
+*.log
+*.tmp
+*.bak
+
+# Local secrets; do not ignore tracked blocker exports or archive backups.
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+secrets/
+private/

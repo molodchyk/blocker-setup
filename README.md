@@ -2,6 +2,69 @@
 
 This is a guide for me for when I'm setting up blocker configuration for my new laptop/PC.
 
+Personal blocker setup guide for configuring new Windows laptops/PCs and Android devices with browser policies, app blockers, DNS/hosts restrictions, permission hardening, and ADB package removal.
+
+## GitHub About
+
+GitHub About description:
+
+> Personal Windows, Chrome, DNS, and Android blocker setup guide with exported configs, hosts entries, and ADB notes.
+
+Topics: `productivity`, `digital-wellbeing`, `website-blocker`, `distraction-blocking`, `windows`, `chrome-policy`, `dns`, `nextdns`, `hosts-file`, `cold-turkey`, `focusme`, `adb`, `android`, `boox`, `samsung`
+
+## What this repo contains
+
+- A step-by-step blocker setup guide for Windows, Chrome, Cold Turkey, FocusMe, hosts/DNS, NextDNS, BOOX, and Samsung devices.
+- Exported blocker configuration files and dated backup archives.
+- A legacy `hosts` file with local block entries.
+- Android SDK Platform Tools plus extracted ADB scripts for package removal notes already documented below.
+- A privacy-review note for keeping the public repo clean of accidental secrets.
+
+## Safety notes
+
+- Registry edits, Local Security Policy changes, folder permission changes, hosts-file edits, DNS changes, and ADB package removal can break expected system behavior if applied to the wrong machine or account.
+- Several steps require administrator rights.
+- ADB commands use `pm uninstall -k --user 0`, which removes apps for the current Android user while keeping the base package on the device.
+- This repository is public. Review screenshots, exports, archives, and password-related notes before adding new files.
+
+## Repository inventory
+
+| Path | Purpose |
+| --- | --- |
+| `README.md` | Main setup guide and screenshot references. |
+| `Execution websites.txt` | Website block list for the execution setup. |
+| `Execution Applications List.ctbal` | Cold Turkey application/window title rules for execution mode. |
+| `Windows Apps Applications List.ctbal` | Cold Turkey application/window title rules for Windows apps and admin tools. |
+| `execution.fmp`, `no uninstall.fmp` | FocusMe plan exports. |
+| `09-08-2024.zip`, `16-12-2024.zip`, `no uninstall.zip` | Dated backup archives containing older blocker exports. |
+| `19.10.2025 focusme.rar`, `focusme 31.05.2025.rar` | Dated FocusMe backup archives. |
+| `hosts` | Legacy Windows hosts-file block entries. |
+| `ChannelBlocker 2024-6-21.save` | ChannelBlocker export. |
+| `DaD-extension-data-2024-06-20.json` | Browser extension data export. |
+| `annotations.xml`, `context.xml` | Custom search / filtering configuration exports. |
+| `platform-tools/` | Android SDK Platform Tools and the original `timelimit.bat`. |
+| `scripts/` | Extracted scripts that mirror command blocks from this guide. |
+| `docs/privacy-review.md` | Public-repo privacy scan notes and future checklist. |
+
+## Extracted scripts
+
+The original commands are preserved below. Script copies live in `scripts/` so command groups can be reviewed and run without copying them out of the README.
+
+| Script | Mirrors |
+| --- | --- |
+| `scripts/enable-local-policy-tools.cmd` | Step 6 Local Group Policy / Local Security Policy setup. |
+| `scripts/boox-note2-remove-google-play.bat` | Step 13 BOOX Note 2 Google Play and mail package removal. |
+| `scripts/boox-note2-uninstall-2024-08-26.bat` | Step 14 BOOX Note 2 block dated 2024-08-26. |
+| `scripts/samsung-uninstall-2024-03-25.bat` | Step 14 Samsung block dated 2024-03-25. |
+| `scripts/samsung-uninstall-2024-03-26.bat` | Step 14 Samsung blocks dated 2024-03-26. |
+| `scripts/samsung-uninstall-2024-09-01.bat` | Step 14 Samsung block dated 2024-09-01. |
+
+## Setup guide
+
+The details below preserve the original setup notes, commands, screenshots, package names, and numbering, including the existing jump from 14 to 16.
+
+## Windows and Chrome policies
+
 
 
 1. First go to regedit -> Computer\HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Explorer and create REG_DWORD DisableSearchBoxSuggestions with value of 1.
@@ -64,8 +127,12 @@ Settings should look like this (now, we can't change the UI language)
 
 I actually have no idea how robust adding these feature is, and even what it does, but here is the script to paste into cmd with admin rights:
 
+```cmd
 FOR %F IN ("%SystemRoot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~*.mum") DO (DISM /Online /NoRestart /Add-Package:"%F")
 FOR %F IN ("%SystemRoot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~*.mum") DO (DISM /Online /NoRestart /Add-Package:"%F")
+```
+
+Script copy: `scripts/enable-local-policy-tools.cmd`.
 
 7. Now that we've activated these, press start + R to open Run, and type in secpol.msc and press Enter. Here, for "Change the system time" and "Change the time zone" leave only LOCAL SERVICE. Click Remove to remove the other users and click Apply and then Enter.
 
@@ -77,6 +144,8 @@ To something like this:
 
 ![Screenshot 2024-02-17 011427](https://github.com/molodchyk/blocker-setup/assets/73010708/bd6691f6-81b3-4a2e-8e89-6c744677b1ab)
 
+## Blocker app and hosts hardening
+
 8. Remove permissions for Cold Turkey folders (both in C:\Program Files and in C:\ProgramData). Click on folder -> properties -> security -> advanced -> disable inheritance -> convert inherited permissions into explicit permissions on this object -> add -> select a principal -> advanced -> find now -> select administrators PC -> click ok -> for type, click deny -> for applies to, select "this folder only" -> show advanced permissions -> select ONLY list folder / read data -> click ok -> click ok -> click ok.
 
 Should look something like this:
@@ -85,8 +154,10 @@ Should look something like this:
 
 9. And for hosts file located at C:\Windows\System32\drivers\etc I added these entries to block the marketplace (websites can be accessed through their extensions and Cold Turkey and FocusMe can't block them)
 
+```txt
 127.0.0.1 plugins.jetbrains.com
 127.0.0.1 marketplace.visualstudio.com
+```
 
 After adding these entries, these permissions should be denied:
 
@@ -108,6 +179,8 @@ go to regedit -> navigate to Computer\HKEY_CURRENT_USER\Software\Policies\Google
 
 ![image](https://github.com/molodchyk/blocker-setup/assets/73010708/828db37e-711f-4e7f-9784-203b6e3f5444)
 
+
+## Android and ADB setup
 
 13. Download platform-tools folder. Connect BOOX Note 2 e reader to your PC via USB. Enable USB Debug Mode.
 
@@ -137,11 +210,15 @@ Right click timelimit.bat.
 
 timelimit.bat contains the following script:
 
+```bat
 adb.exe shell pm uninstall -k --user 0 com.android.vending
 adb.exe shell pm uninstall -k --user 0 com.google.android.gms
 adb.exe shell pm uninstall -k --user 0 com.android.email
 adb.exe shell pm uninstall -k --user 0 com.onyx.mail
 pause
+```
+
+Script copies: `platform-tools/timelimit.bat` and `scripts/boox-note2-remove-google-play.bat`.
 
 
 Click "Run as Administrator". In "Do you want to make changes to your device?" window, click Yes. 
@@ -200,7 +277,9 @@ com.google.android.accessibility.soundamplifier
 com.google.audio.hearing.visualization.accessibility.scribe
 
 
+Script copies for the dated ADB blocks live in `scripts/`.
 
+```bat
 ::3/25/2024
 adb.exe shell pm uninstall -k --user 0 com.samsung.android.kidsinstaller
 adb.exe shell pm uninstall -k --user 0 com.samsung.storyservice
@@ -281,9 +360,11 @@ adb.exe shell pm uninstall -k --user 0 com.samsung.android.bixby.agent
 adb.exe shell pm uninstall -k --user 0 com.sec.android.app.samsungapps
 
 pause
+```
 
+Script copies: `scripts/samsung-uninstall-2024-03-25.bat` and `scripts/samsung-uninstall-2024-03-26.bat`.
 
-
+```bat
 ::8/26/2024 boox note2
 
 adb.exe shell pm uninstall -k --user 0 com.android.calendar
@@ -317,9 +398,14 @@ adb.exe shell pm uninstall -k --user 0 com.samsung.app.newtrim
 adb.exe shell pm uninstall -k --user 0 com.wssyncmldm
 
 pause
+```
+
+Script copies: `scripts/boox-note2-uninstall-2024-08-26.bat` and `scripts/samsung-uninstall-2024-09-01.bat`.
 
 
 
+
+## Password and application hardening notes
 
 16. the place to store the password, permissions restriction:
 
@@ -340,6 +426,8 @@ pause
 
 <img width="790" height="573" alt="Screenshot 2026-04-23 081220" src="https://github.com/user-attachments/assets/6fc9a154-434e-4bbc-b27d-531ce75ec586" />
 
+
+## DNS and NextDNS hardening
 
 19. DNS porn block on windows:
 Settings -> Network & internet -> Wi-Fi
