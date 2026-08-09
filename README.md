@@ -446,3 +446,7 @@ Settings -> Network & internet -> Wi-Fi
 
 <img width="928" height="601" alt="image" src="https://github.com/user-attachments/assets/c44b1039-dd5e-4df9-89ff-6d7072dbf3ff" />
 
+23. FocusMe block ChatGPT + Firefox
+
+<img width="1278" height="505" alt="image" src="https://github.com/user-attachments/assets/a436df0d-6bf9-490a-948f-ae0885176c35" />
+
